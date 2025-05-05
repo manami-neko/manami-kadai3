@@ -7,6 +7,7 @@
     <title>PiGLy</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css')}}" />
     <link rel="stylesheet" href="{{ asset('css/common.css')}}" />
+    @livewireStyles
     @yield('css')
 </head>
 
@@ -17,12 +18,20 @@
                 PiGLy
             </a>
         </div>
+        <form class="form" action="/wight_logs/goal_setting" method="post">
+            @csrf
+            <button class="header-nav__button">目標体重設定</button>
+        </form>
+        <form class="form" action="/logout" method="post">
+            @csrf
+            <button class="header-nav__button">ログアウト</button>
+        </form>
     </header>
 
     <main>
         @yield('content')
     </main>
-
+    @livewireScripts
 </body>
 
 </html>

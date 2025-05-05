@@ -28,6 +28,6 @@ class CreateWeightTargetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weight_target');
+        Schema::dropIfExists('weight_targets');
     }
 }

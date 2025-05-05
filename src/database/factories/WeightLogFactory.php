@@ -17,8 +17,8 @@ class WeightLogFactory extends Factory
         return [
             'user_id' => User::inRandomOrder()->first()->id,
             'date' => $this->faker->date(),
-            'weight' => $this->faker->randomFloat(1, 40, 150),
-            'calories' => $this->faker->randomNumber(4, 1000, 2500),
+            'weight' => $this->faker->randomFloat(1, 40, 70),
+            'calories' => $this->faker->numberBetween(1000, 2500),
             'exercise_time' => $this->faker->time(),
             'exercise_content' => $this->faker->realText(20),
         ];
