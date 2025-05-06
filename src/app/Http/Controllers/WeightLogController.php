@@ -11,8 +11,8 @@ class WeightLogController extends Controller
 {
     public function index()
     {
-        $weightLog = WeightLog::where('user_id', Auth::id())->orderBy('date', 'desc')->get();
+        $weightLogs = WeightLog::where('user_id', Auth::id())->orderBy('date', 'desc')->paginate(8);
 
-        return view('index', compact('weight_log'));
+        return view('index', compact('weightLogs'));
     }
 }
