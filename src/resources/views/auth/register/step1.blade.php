@@ -13,7 +13,7 @@
         <div>STEP1 アカウント情報の登録</div>
     </div>
 
-    <form class="form" action="/step2" method="post">
+    <form class="form" action="/register/step1" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">
@@ -64,6 +64,6 @@
             <button class="register__button-submit" type="submit">次に進む</button>
         </div>
     </form>
-    <a href="../login">ログインはこちら</a>
+    <a href="{{ url('/login') }}">ログインはこちら</a>
 </div>
 @endsection

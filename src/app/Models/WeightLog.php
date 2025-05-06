@@ -15,7 +15,7 @@ class WeightLog extends Model
         'weight',
         'calories',
         'exercise_time',
-        'exercise_time',
+        'exercise_content',
     ];
 
     public function user()

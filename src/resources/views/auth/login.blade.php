@@ -46,6 +46,6 @@
                 <button class="form__button-submit" type="submit">ログイン</button>
             </div>
     </form>
-    <a href="{{ route('register.step1') }}">アカウント作成はこちら</a>
+    <a href="{{ url('register/step1') }}">アカウント作成はこちら</a>
 </div>
 @endsection

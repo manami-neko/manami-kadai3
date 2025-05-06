@@ -4,11 +4,18 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\WeightLog;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterModal extends Component
 {
     public $weightLog;
     public $showModal = false;
+    public $date;
+    public $weight;
+    public $calories;
+    public $exercise_time;
+    public $exercise_content;
+
 
     protected $listeners = [
         'openModal' => "openModal",
@@ -38,9 +45,17 @@ class RegisterModal extends Component
         ]);
 
         $this->emit('weightLogCreated');
-        $this->reset(['user_id', 'date', 'weight', 'calories', 'exercise_time', 'exercise_content']);
+        $this->reset(['date', 'weight', 'calories', 'exercise_time', 'exercise_content']);
         $this->closeModal();
     }
+
+    public $user;
+
+    public function mount()
+    {
+        $this->user = Auth::user();
+    }
+
 
     public function render()
     {

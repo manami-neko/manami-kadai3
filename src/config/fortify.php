@@ -157,4 +157,9 @@ return [
         ]),
     ],
 
+    'paths' => [
+        'register' => '/register/step1',
+        'login' => '/login',
+    ]
+
 ];

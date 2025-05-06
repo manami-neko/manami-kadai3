@@ -21,36 +21,38 @@
             <input type="submit" name="search-button" value="検索">
             <input type="submit" name="reset-button" value="リセット">
             <td>
-                @livewire('register-modal',['weightLog' => $weightLog])
+                @livewire('register-modal',['userId' => Auth::id()])
             </td>
 
+            @foreach ($weightLogs as $weightLog)
             <tr class="list-table__row">
                 <th class="list-table__header">日付</th>
                 <td class="list-table__text">
-                    <input type="text" name="date" value="{{ $weight_log['date'] }}" readonly />
+                    <input type="text" name="date" value="{{ $weightLogs['date'] }}" readonly />
                 </td>
             </tr>
             <tr class="list-table__row">
                 <th class="list-table__header">体重</th>
                 <td class="list-table__text">
-                    <input type="text" name="weight" value="{{ $weight_log['weight'] }}" readonly />kg
+                    <input type="text" name="weight" value="{{ $weightLogs['weight'] }}" readonly />kg
                 </td>
             </tr>
             <tr class="list-table__row">
                 <th class="list-table__header">食事摂取カロリー</th>
                 <td class="list-table__text">
-                    <input type="text" name="calories" value="{{ $weight_log['calories'] }}" readonly />col
+                    <input type="text" name="calories" value="{{ $weightLogs['calories'] }}" readonly />col
                 </td>
             </tr>
             <tr class="list-table__row">
                 <th class="list-table__header">運動時間</th>
                 <td class="list-table__text">
-                    <input type="time" name="exercise_time" value="{{ $weight_log['exercise_time'] }}" readonly />
+                    <input type="time" name="exercise_time" value="{{ $weightLogs['exercise_time'] }}" readonly />
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
 </form>
-<div> {{ $products->links('pagination::bootstrap-4') }}
+<div> {{ $weightLog->links('pagination::bootstrap-4') }}
 </div>
 @endsection
