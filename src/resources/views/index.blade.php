@@ -33,7 +33,7 @@
                 <th class="list-table__header">運動時間</th>
             </tr>
 
-            @foreach ($weightLog as $weightLog)
+            @foreach ($weightLogs as $weightLog)
             <tr class="list-table__row">
                 <td class="list-table__text">
                     <input type="text" name="date" value="{{ $weightLog['date'] }}" readonly />
