@@ -3,6 +3,8 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index
 .css') }}" />
+<link rel="stylesheet" href="{{ asset('css/register-modal
+.css') }}" />
 @endsection
 
 @section('content')
@@ -24,27 +26,24 @@
                 @livewire('register-modal',['userId' => Auth::id()])
             </td>
 
-            @foreach ($weightLog as $weightLog)
             <tr class="list-table__row">
                 <th class="list-table__header">日付</th>
+                <th class="list-table__header">体重</th>
+                <th class="list-table__header">食事摂取カロリー</th>
+                <th class="list-table__header">運動時間</th>
+            </tr>
+
+            @foreach ($weightLog as $weightLog)
+            <tr class="list-table__row">
                 <td class="list-table__text">
                     <input type="text" name="date" value="{{ $weightLog['date'] }}" readonly />
                 </td>
-            </tr>
-            <tr class="list-table__row">
-                <th class="list-table__header">体重</th>
                 <td class="list-table__text">
                     <input type="text" name="weight" value="{{ $weightLog['weight'] }}" readonly />kg
                 </td>
-            </tr>
-            <tr class="list-table__row">
-                <th class="list-table__header">食事摂取カロリー</th>
                 <td class="list-table__text">
                     <input type="text" name="calories" value="{{ $weightLog['calories'] }}" readonly />col
                 </td>
-            </tr>
-            <tr class="list-table__row">
-                <th class="list-table__header">運動時間</th>
                 <td class="list-table__text">
                     <input type="time" name="exercise_time" value="{{ $weightLog['exercise_time'] }}" readonly />
                 </td>
