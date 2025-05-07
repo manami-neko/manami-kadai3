@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WeightLogController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\WeightTargetController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +32,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/weight_logs', [WeightLogController::class, 'index']);
 
-    Route::post('/weight_logs/create', [UserController::class, 'store']);
-    Route::get('/weight_logs/search', [UserController::class, 'search']);
-    Route::get('/weight_logs/{weightLogId}', [UserController::class, 'show']);
-    Route::post('/weight_logs/{weightLogId}/update', [UserController::class, 'update']);
-    Route::get('/weight_logs/goal_setting', [UserController::class, 'target']);
-    Route::post('/weight_logs/{weightLogId}/delete', [UserController::class, 'delete']);
+    Route::post('/weight_logs/create', [WeightLogController::class, 'store']);
+    Route::get('/weight_logs/search', [WeightLogController::class, 'search']);
+    Route::get('/weight_logs/{weightLogId}', [WeightLogController::class, 'show']);
+    Route::post('/weight_logs/{weightLogId}/update', [WeightLogController::class, 'update']);
+    Route::get('/goal_setting', [WeightTargetController::class, 'target']);
+    Route::post('/weight_logs/{weightLogId}/delete', [WeightLogController::class, 'delete']);
 });

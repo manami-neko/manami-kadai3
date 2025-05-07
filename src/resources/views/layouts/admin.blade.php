@@ -18,7 +18,7 @@
                 PiGLy
             </a>
         </div>
-        <form class="form" action="/wight_logs/goal_setting" method="post">
+        <form class="form" action="/goal_setting" method="get">
             @csrf
             <button class="header-nav__button">目標体重設定</button>
         </form>

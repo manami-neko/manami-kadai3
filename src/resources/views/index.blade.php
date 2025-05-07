@@ -42,7 +42,7 @@
                     <input type="text" name="weight" value="{{ $weightLog['weight'] }}" readonly />kg
                 </td>
                 <td class="list-table__text">
-                    <input type="text" name="calories" value="{{ $weightLog['calories'] }}" readonly />col
+                    <input type="text" name="calories" value="{{ $weightLog['calories'] }}" readonly />cal
                 </td>
                 <td class="list-table__text">
                     <input type="time" name="exercise_time" value="{{ $weightLog['exercise_time'] }}" readonly />

@@ -49,7 +49,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="calories" value="{{ old('calories') }}" placeholder="1200" />col
+                    <input type="text" name="calories" value="{{ old('calories') }}" placeholder="1200" />cal
                 </div>
                 <div class="form__error">
                     @error('calories')

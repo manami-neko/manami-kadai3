@@ -36,7 +36,7 @@ class RegisterModal extends Component
     public function createWeightLog()
     {
         WeightLog::create([
-            'user_id' => $this->user_id,
+            'user_id' => $this->user->id,
             'date' => $this->date,
             'weight' => $this->weight,
             'calories' => $this->calories,

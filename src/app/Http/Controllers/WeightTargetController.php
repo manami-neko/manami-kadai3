@@ -11,4 +11,6 @@ class WeightTargetController extends Controller
     {
         return view('target');
     }
+
+    public function update() {}
 }

@@ -9,7 +9,7 @@
             </div>
 
             <div class="register-modal__inner">
-                <form class="form" action="/weight_logs" method="post">
+                <form class="form" action="/weight_logs/create" method="post">
                     @csrf
                     <div class="register-modal__group">
                         <div class="form__group-title">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="form__group-content">
                             <div class="form__input--text">
-                                <input type="text" name="calories" value="{{ old('calories') }}" placeholder="1200" />col
+                                <input type="text" name="calories" value="{{ old('calories') }}" placeholder="1200" />cal
                             </div>
                             <div class="form__error">
                                 @error('calories')
