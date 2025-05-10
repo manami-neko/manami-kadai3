@@ -33,8 +33,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/weight_logs/create', [WeightLogController::class, 'store']);
     Route::get('/weight_logs/search', [WeightLogController::class, 'search']);
-    Route::post('/weight_logs/{weightLogId}', [WeightLogController::class, 'show']);
+    Route::get('/weight_logs/{weightLogId}', [WeightLogController::class, 'show']);
     Route::post('/weight_logs/{weightLogId}/update', [WeightTargetController::class, 'update']);
+    Route::put('/weight_logs/{weightLogId}/update', [WeightLogController::class, 'update']);
     Route::get('/goal_setting', [WeightTargetController::class, 'target']);
     Route::post('/weight_logs/{weightLogId}/delete', [WeightLogController::class, 'delete']);
 });

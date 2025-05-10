@@ -47,4 +47,12 @@ class WeightLogController extends Controller
 
         return view('index', compact('weightLogs'));
     }
+
+    public function update(Request $request, $weightLogId)
+    {
+        $form = $request->all();
+        unset($form['_token']);
+        WeightLog::find($weightLogId)->update($form);
+        return redirect('/weight_logs');
+    }
 }

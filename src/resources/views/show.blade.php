@@ -11,8 +11,9 @@
 </div>
 
 <div class="show__inner">
-    <form class="form" action="/weight_logs/{weightLogId}" method="post">
+    <form class="form" action="/weight_logs/{{ $weightLogs->id }}/update" method="post">
         @csrf
+        @method('PUT')
         <div class="show__group">
             <div class="form__group-title">
                 <span class="form__label--item">日付</span>

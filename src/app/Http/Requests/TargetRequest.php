@@ -24,7 +24,7 @@ class TargetRequest extends FormRequest
     public function rules()
     {
         return [
-            'target_weight' => 'required|regex:/^\d{1,3}$/|regex:/^\d{1,4}(\.\d)?$/',
+            'target_weight' => 'required|regex:/^\d{1,4}$/|regex:/^\d{1,4}(\.\d)?$/',
         ];
     }
 
@@ -32,7 +32,7 @@ class TargetRequest extends FormRequest
     {
         return [
             'target_weight.required' => '目標の体重を入力してください',
-            'target_weight.regex:/^\d{1,4}$/' => '4桁までの数字で入力してください',
+            'target_weight.regex' => '4桁までの数字で入力してください',
             'target_weight.regex:/^\d{1,4}(\.\d)?$/' => '小数点は1桁で入力してください',
         ];
     }
