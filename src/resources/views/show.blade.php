@@ -90,10 +90,10 @@
             </div>
         </div>
         <div class="form__button">
-            <button class="back__button" type="button" ">戻る</button>
+            <a href="/weight_logs" class="back__button">戻る</a>
         </div>
         <div class=" create__button">
-                <button class="update__button-submit" type="submit">更新</button>
+            <button class="update__button-submit" type="submit">更新</button>
         </div>
     </form>
 </div>

@@ -26,7 +26,6 @@
         </div>
         <div class="form__button">
             <a href="/weight_logs" class="back__button">戻る</a>
-
         </div>
         <div class=" create__button">
             <button class="update__button-submit" type="submit">更新</button>
