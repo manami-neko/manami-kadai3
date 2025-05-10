@@ -61,9 +61,9 @@
             </div>
         </div>
         <div class="form__button">
-            <button class="register__button-submit" type="submit">次に進む</button>
+            <button class="form__button-submit" type="submit">次に進む</button>
         </div>
+        <a href="{{ url('/login') }}">ログインはこちら</a>
     </form>
-    <a href="{{ url('/login') }}">ログインはこちら</a>
 </div>
 @endsection

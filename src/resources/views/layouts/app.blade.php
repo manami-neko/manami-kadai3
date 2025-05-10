@@ -13,9 +13,9 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo">
+            <div class="header__logo">
                 PiGLy
-            </a>
+            </div>
         </div>
     </header>
 

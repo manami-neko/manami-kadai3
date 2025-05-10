@@ -35,13 +35,15 @@
         <input type="date" name="start_date" value="{{ request('start_date') }}" />～
         <input type="date" name="end_date" value="{{ request('end_date') }}" />
 
-        <input type="submit" name="search-button" value="検索">
+        <div class="search-button">
+            <input type="submit" name="search-button" value="検索">
+        </div>
         <input type="reset" name="reset-button" value="リセット">
 
         @livewire('register-modal',['userId' => Auth::id()])
 
         <table class="list-table__inner">
-            <tr class="list-table__row">
+            <tr class="list-title__row">
                 <th class="list-table__header">日付</th>
                 <th class="list-table__header">体重</th>
                 <th class="list-table__header">食事摂取カロリー</th>

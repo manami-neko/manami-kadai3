@@ -1,6 +1,5 @@
 .register-form__content {
     margin: 0 auto;
-    padding: 30px 15px;
     max-width: 1230px;
 }
 
@@ -46,11 +45,9 @@
 .form__button-submit {
     padding: 10px;
     width: 30%;
-    height: 50px;
     border: none;
     border-radius: 3px;
-    background: #000;
-    color: #fff;
+    background: linear-gradient(90deg, #A3A6E1, #FFABD9);
     cursor: pointer;
 }
 
