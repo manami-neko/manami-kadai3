@@ -16,3 +16,9 @@
     width: 30%;
     height: 60%;
 }
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}

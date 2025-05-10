@@ -11,7 +11,7 @@
 </div>
 
 <div class="show__inner">
-    <form class="form" action="/weight_logs" method="post">
+    <form class="form" action="/weight_logs/{weightLogId}" method="post">
         @csrf
         <div class="show__group">
             <div class="form__group-title">
@@ -19,7 +19,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="date" name="date" value="{{ old('date') }}" placeholder="{{ \Carbon\Carbon::today()->format('Y年m月d日') }}" />
+                    <input type="date" name="date" value="{{ $weightLogs->date }}" placeholder="{{ \Carbon\Carbon::today()->format('Y年m月d日') }}" />
                 </div>
                 <div class="form__error">
                     @error('date')
@@ -34,7 +34,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="weight" value="{{ old('weight') }}" placeholder="50.0" />kg
+                    <input type="text" name="weight" value="{{ $weightLogs->weight }}" placeholder="50.0" />kg
                 </div>
                 <div class="form__error">
                     @error('weight')
@@ -49,7 +49,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="calories" value="{{ old('calories') }}" placeholder="1200" />cal
+                    <input type="text" name="calories" value="{{ $weightLogs->calories }}" placeholder="1200" />cal
                 </div>
                 <div class="form__error">
                     @error('calories')
@@ -64,7 +64,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="time" name="exercise_time" value="{{ old('exercise_time') }}" placeholder="00:00" />
+                    <input type="time" name="exercise_time" value="{{ $weightLogs->exercise_time }}" placeholder="00:00" />
                 </div>
                 <div class="form__error">
                     @error('exercise_time')
@@ -79,7 +79,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--textarea">
-                    <textarea name="exercise_content" value="{{ old('exercise_content') }}" placeholder="運動内容を追加"></textarea>
+                    <textarea name="exercise_content" value="{{ $weightLogs->exercise_content }}" placeholder="運動内容を追加"></textarea>
                 </div>
                 <div class="form__error">
                     @error('exercise_content')

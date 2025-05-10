@@ -11,21 +11,15 @@
 
 <form class="form" action="/weight_logs/search" method="get">
     <div class="list-table">
-        <table class="list-table__inner">
-            <tr class="list-table__row">
-                <th class="list-table__header">
-                <td class="list-table__text">
-                    <input type="date" name="date" />～
-                    <input type="date" name="date" readonly />
-                </td>
-            </tr>
-            </th>
-            <input type="submit" name="search-button" value="検索">
-            <input type="submit" name="reset-button" value="リセット">
-            <td>
-                @livewire('register-modal',['userId' => Auth::id()])
-            </td>
+        <input type="date" name="start_date" value="{{ old('start_date') }}" />～
+        <input type="date" name="end_date" value="{{ old('end_date') }}" />
 
+        <input type="submit" name="search-button" value="検索">
+        <input type="reset" name="reset-button" value="リセット">
+
+        @livewire('register-modal',['userId' => Auth::id()])
+
+        <table class="list-table__inner">
             <tr class="list-table__row">
                 <th class="list-table__header">日付</th>
                 <th class="list-table__header">体重</th>
@@ -46,6 +40,13 @@
                 </td>
                 <td class="list-table__text">
                     <input type="time" name="exercise_time" value="{{ $weightLog['exercise_time'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/weight_logs/{{ $weightLog->id }}">
+                        <img src=" {{ asset('image/pen.png') }}" alt="pen">
+                    </a>
                 </td>
             </tr>
             @endforeach
