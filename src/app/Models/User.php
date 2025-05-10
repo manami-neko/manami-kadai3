@@ -16,4 +16,9 @@ class User extends Authenticatable
         'email',
         'password'
     ];
+
+    public function weightTarget()
+    {
+        return $this->hasOne(WeightTarget::class);
+    }
 }

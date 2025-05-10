@@ -4,13 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\WeightTarget;
 
 class WeightTargetController extends Controller
 {
-    public function target()
+    public function target(Request $request)
     {
-        return view('target');
+        $user = Auth::user();
+        $weightTarget = $user->weightTarget;
+        $target_weight = $weightTarget->target_weight;
+
+        return view('target', compact('weightTarget', 'target_weight'));
     }
 
-    public function update() {}
+    public function update(Request $request, $weightLogId)
+    {
+        $form = $request->all();
+        unset($form['_token']);
+        WeightTarget::find($weightLogId)->update($form);
+        return redirect('/weight_logs');
+    }
 }
