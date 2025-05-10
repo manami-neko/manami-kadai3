@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\WeightLog;
 use App\Http\Requests\RegisterModalRequest;
+use App\Models\WeightTarget;
+
 
 
 class WeightLogController extends Controller
@@ -13,8 +15,9 @@ class WeightLogController extends Controller
     public function index()
     {
         $weightLogs = WeightLog::where('user_id', Auth::id())->orderBy('date', 'desc')->paginate(8);
+        $weightTarget = WeightTarget::where('user_id', Auth::id())->first();
 
-        return view('index', compact('weightLogs'));
+        return view('index', compact('weightLogs', 'weightTarget'));
     }
 
     public function store(Request $request)

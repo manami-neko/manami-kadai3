@@ -80,7 +80,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--textarea">
-                    <textarea name="exercise_content" value="{{ $weightLogs->exercise_content }}" placeholder="運動内容を追加"></textarea>
+                    <textarea name="exercise_content" placeholder="運動内容を追加">{{ $weightLogs->exercise_content }}</textarea>
                 </div>
                 <div class="form__error">
                     @error('exercise_content')

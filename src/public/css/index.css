@@ -5,3 +5,8 @@
 .pagination li {
     display: inline-block;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+}
