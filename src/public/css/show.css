@@ -1,9 +1,31 @@
 .back__button {
     display: inline-block;
-    padding: 5px 5px;
+    padding: 1px 5px;
     background-color: #ccc;
     color: #000;
     text-align: center;
     border-radius: 4px;
     text-decoration: none;
+}
+
+.show__heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.show__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
 }

@@ -10,8 +10,8 @@
 <div class="register-form__content">
     <div class="register-form__heading">
         <h2>新規会員登録</h2>
+        <div>STEP2 体重データの入力</div>
     </div>
-    <p>STEP2 体重データの入力</p>
 
     <form class="form" action="/register/step2" method="post">
         @csrf

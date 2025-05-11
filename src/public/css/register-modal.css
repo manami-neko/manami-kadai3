@@ -40,3 +40,13 @@
 .register-modal__inner {
     padding-left: 5px;
 }
+
+.form__label--required {
+    display: inline-block;
+        padding: 1px 5px;
+        background-color: #F65A5A;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius: 4px;
+        
+}

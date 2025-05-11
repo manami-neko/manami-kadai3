@@ -20,7 +20,7 @@ class WeightLogController extends Controller
         return view('index', compact('weightLogs', 'weightTarget'));
     }
 
-    public function store(Request $request)
+    public function store(RegisterModalRequest $request)
     {
         WeightLog::create([
             'user_id' => Auth::id(),
@@ -51,7 +51,7 @@ class WeightLogController extends Controller
         return view('index', compact('weightLogs'));
     }
 
-    public function update(Request $request, $weightLogId)
+    public function update(RegisterModalRequest $request, $weightLogId)
     {
         $form = $request->all();
         unset($form['_token']);

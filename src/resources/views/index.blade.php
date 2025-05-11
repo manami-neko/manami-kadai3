@@ -10,8 +10,8 @@
 @section('content')
 
 <form class="form" action="/weight_logs/search" method="get">
-    <table class="list-table__header">
-        <div class="weight-table">
+    <div class="weight-table">
+        <table class="list-table__header">
             <tr class="weight-table__header">
                 <th class="weight-table__header">目標体重</th>
                 <th class="weight-table__header">目標まで</th>
@@ -28,8 +28,8 @@
                     {{ optional($weightLogs->first())->weight }}kg
                 </td>
             </tr>
-        </div>
-    </table>
+        </table>
+    </div>
 
     <div class="list__menu">
         <input type="date" name="start_date" value="{{ request('start_date') }}" />～

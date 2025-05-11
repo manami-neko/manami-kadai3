@@ -18,7 +18,7 @@ class WeightTargetController extends Controller
         return view('target', compact('weightTarget', 'target_weight'));
     }
 
-    public function update(Request $request, $weightLogId)
+    public function update(TargetRequest $request, $weightLogId)
     {
         $form = $request->all();
         unset($form['_token']);

@@ -39,14 +39,14 @@ class UserController extends Controller
             'weight' => $request->weight,
             'date' => Carbon::now()->toDateString(),
         ]);
-        WeightTarget::create([
+        $weightTarget = WeightTarget::create([
             'user_id' => Auth::id(),
             'target_weight' => $request->target_weight,
         ]);
 
         $weightLogs = WeightLog::where('user_id', Auth::id())->orderBy('date', 'desc')->paginate(8);
 
-        return view('index', compact('weightLogs'));
+        return view('index', compact('weightLogs', 'weightTarget'));
     }
 
     public function login(Request $request)
