@@ -90,11 +90,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="create__button">
-                        <button class="create__button-submit" type="submit" wire:click="createWeightLog">登録</button>
-                    </div>
-                    <div class="form__button">
-                        <button class="back__button" type="button" wire:click="closeModal">戻る</button>
+                    <div class="button">
+                        <div class="create__button">
+                            <button class="create__button-submit" type="submit" wire:click="createWeightLog">登録</button>
+                        </div>
+                        <div class="form__button">
+                            <button class="back__button" type="button" wire:click="closeModal">戻る</button>
+                        </div>
                     </div>
                 </form>
             </div>

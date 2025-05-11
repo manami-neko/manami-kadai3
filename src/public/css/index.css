@@ -18,3 +18,9 @@ main {
 .search-button {
     color: #919191;
 }
+
+.list__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
